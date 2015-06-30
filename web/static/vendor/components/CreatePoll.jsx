@@ -1,7 +1,7 @@
 var C = React.createClass({
   render: function() {
     return (
-      <div>KETJSELJSFKLJSLDF</div>
+      <div>FORM FOR CREATING A POLL</div>
     );
   }
 });
