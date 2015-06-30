@@ -16,6 +16,7 @@ defmodule Qckpoll.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/create", PollController, :index
   end
 
   # Other scopes may use custom stacks.
