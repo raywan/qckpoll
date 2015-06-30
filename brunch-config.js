@@ -2,7 +2,10 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-      joinTo: 'js/app.js'
+      joinTo: {
+        'js/app.js': /^!(web\/static\/components)/,
+        'js/react_components.js': /^(web\/static\/components)/
+      }
       // To use a separate vendor.js bundle, specify two files path
       // https://github.com/brunch/brunch/blob/stable/docs/config.md#files
       // joinTo: {
@@ -41,6 +44,14 @@ exports.config = {
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/^(web\/static\/vendor)/]
+    },
+    react: {
+      'transformOptions': {
+        harmony: true,
+        sourceMap: false,
+        stripTypes: false
+      },
+      'bable':false
     }
   }
 };
