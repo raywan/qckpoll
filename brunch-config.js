@@ -3,8 +3,8 @@ exports.config = {
   files: {
     javascripts: {
       joinTo: {
-        'js/app.js': /^!(web\/static\/components)/,
-        'js/components/components.js': /^(web\/static\/vendor\/components)/
+        'js/app.js': /^!(web\/static\/components)/
+        // 'js/components/components.js': /^(web\/static\/vendor\/components)/
       }
       // To use a separate vendor.js bundle, specify two files path
       // https://github.com/brunch/brunch/blob/stable/docs/config.md#files
@@ -45,18 +45,18 @@ exports.config = {
       // Do not use ES6 compiler in vendor code
       ignore: [/^(web\/static\/vendor)/]
     },
-    react: {
-      transformOptions: {
-        harmony: true,
-        sourceMap: false,
-        stripTypes: false
-      },
-      babel: false
-    },
+    // react: {
+    //   transformOptions: {
+    //     harmony: true,
+    //     sourceMap: false,
+    //     stripTypes: false
+    //   },
+    //   babel: false
+    // },
     assetsmanager: {
       copyTo: {
         'js' : ['web/static/other/*'],
-        'js/components' : ['web/static/components/*']
+        'js/components' : ['web/static/vendor/components/*']
       }
     }
   }
