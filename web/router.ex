@@ -1,6 +1,7 @@
 defmodule Qckpoll.Router do
   use Qckpoll.Web, :router
 
+
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -17,6 +18,10 @@ defmodule Qckpoll.Router do
 
     get "/", PageController, :index
     get "/create", PollController, :index
+  end
+
+  socket "/ws", Qckpoll do
+    channel "rooms:*", RoomChannel
   end
 
   # Other scopes may use custom stacks.

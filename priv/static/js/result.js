@@ -109,7 +109,7 @@
   require.brunch = true;
   globals.require = require;
 })();
-require.register("web/static/js/app", function(exports, require, module) {
+require.register("web/static/js/result", function(exports, require, module) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -118,18 +118,18 @@ Object.defineProperty(exports, "__esModule", {
 
 var _phoenix = require("phoenix");
 
-// let socket = new Socket("/ws")
-// socket.connect()
-// let chan = socket.chan("rooms:lobby", {})
-// chan.join().receive("ok", chan => {
-//   console.log("Welcome to Phoenix Chat!")
-// })
+var socket = new _phoenix.Socket("/ws");
+socket.connect();
+var chan = socket.chan("rooms:lobby", {});
+chan.join().receive("ok", function (chan) {
+  console.log("Welcome to kajdlksfjkasldfjkl Chat!");
+});
 
-var App = {};
+var PollResult = {};
 
-exports["default"] = App;
+exports["default"] = PollResult;
 module.exports = exports["default"];
 });
 
 ;
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=result.js.map

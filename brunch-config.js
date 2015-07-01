@@ -3,8 +3,10 @@ exports.config = {
   files: {
     javascripts: {
       joinTo: {
-        'js/app.js': /^!(web\/static\/components)/
+        'js/app.js': /^(web\/static\/js\/(?=app))/,
+        'js/result.js': /^(web\/static\/js\/(?=result))/,
         // 'js/components/components.js': /^(web\/static\/vendor\/components)/
+        'js/vendor.js': /^(web\/static\/vendor)/
       }
       // To use a separate vendor.js bundle, specify two files path
       // https://github.com/brunch/brunch/blob/stable/docs/config.md#files
@@ -56,7 +58,7 @@ exports.config = {
     assetsmanager: {
       copyTo: {
         'js' : ['web/static/other/*'],
-        'js/components' : ['web/static/vendor/components/*']
+        'js/components' : ['web/static/components/*']
       }
     }
   }

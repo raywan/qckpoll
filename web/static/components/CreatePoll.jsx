@@ -35,8 +35,6 @@ var CreatePoll = React.createClass({
     console.log("TITLE: " + title);
     console.log("CHOICES: ");
     console.log(choices);
-
-
     return;
   },
   render: function() {
