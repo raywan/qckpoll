@@ -7,6 +7,7 @@ defmodule Qckpoll.User do
     field :bio, :string
     field :number_of_pets, :integer
 
+    has_many :polls, HelloPhoenix.Poll
     timestamps
   end
 

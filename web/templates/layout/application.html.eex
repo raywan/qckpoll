@@ -18,8 +18,9 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+          <li><a href="/create">Create</a></li>
         </ul>
-        <span class="logo"></span>
+        <a href="/"><h1>QckPoll</h1></a>
       </div>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

@@ -17,9 +17,9 @@ defmodule Qckpoll.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/create", PageController, :index
+    get "/create", PageController, :create_poll
     resources "/users", UserController
-    resources "/poll", PollController
+    resources "/polls", PollController
   end
 
   socket "/ws", Qckpoll do

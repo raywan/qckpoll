@@ -9,7 +9,7 @@ defmodule Qckpoll.Poll do
   end
 
   @required_fields ~w(title)
-  @optional_fields ~w()
+  @optional_fields ~w(user)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
