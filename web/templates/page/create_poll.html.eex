@@ -1,0 +1,5 @@
+<div id="create"></div>
+<script type="text/jsx" src="<%= static_path(@conn, "/js/components/CreatePoll.jsx") %>"></script>
+<script src="<%= static_path(@conn, "/js/vendor.js") %>"></script>
+<script src="<%= static_path(@conn, "/js/result.js") %>"></script>
+<script>require("web/static/js/result")</script>
