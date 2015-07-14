@@ -7,11 +7,6 @@
     <%= @poll.title %>
   </li>
 
-  <li>
-    <strong>User:</strong>
-    <%= @poll.user %>
-  </li>
-
 </ul>
 
 <%= link "Back", to: poll_path(@conn, :index) %>

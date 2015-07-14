@@ -7,12 +7,10 @@ defmodule Qckpoll.User do
     field :bio, :string
     field :number_of_pets, :integer
 
-    has_many :polls, HelloPhoenix.Poll
     timestamps
   end
 
   @required_fields ~w(name email bio number_of_pets)
-  @optional_fields ~w()
 
   @doc """
   Creates a changeset based on the `model` and `params`.
@@ -22,6 +20,6 @@ defmodule Qckpoll.User do
   """
   def changeset(model, params \\ :empty) do
     model
-    |> cast(params, @required_fields, @optional_fields)
+    |> cast(params, @required_fields)
   end
 end

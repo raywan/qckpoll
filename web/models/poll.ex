@@ -3,13 +3,11 @@ defmodule Qckpoll.Poll do
 
   schema "poll" do
     field :title, :string
-    belongs_to :user, Qckpoll.User
 
     timestamps
   end
 
   @required_fields ~w(title)
-  @optional_fields ~w(user)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

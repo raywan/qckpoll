@@ -7,7 +7,7 @@ defmodule Qckpoll.PollController do
   plug :action
 
   def index(conn, _params) do
-    poll = Repo.all(Poll)
+    poll = Poll |> Repo.all
     render(conn, "index.html", poll: poll)
   end
 
@@ -31,7 +31,7 @@ defmodule Qckpoll.PollController do
   end
 
   def show(conn, %{"id" => id}) do
-    poll = Repo.get(Poll, id)
+    poll = Poll |> Repo.all
     render(conn, "show.html", poll: poll)
   end
 
